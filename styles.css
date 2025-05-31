@@ -1,0 +1,191 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+header {
+  background: #4caf50;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  padding: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+#add-expense {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#add-expense form {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-expense input,
+#add-expense select {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#add-expense button {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#add-expense button:hover {
+  background: #45a049;
+}
+
+#expenses-list {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+#expenses-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#expenses-list li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#expenses-list li:last-child {
+  border-bottom: none;
+}
+
+#expenses-list li button {
+  background: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.total {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+#clear-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#clear-btn:hover {
+  background: #d32f2f;
+}
+
+#export-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#export-btn:hover {
+  background: #1565c0;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background: #333;
+}
+
+body.dark-mode #add-expense,
+body.dark-mode #expenses-list {
+  background: #1e1e1e;
+  box-shadow: none;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+  background: #2e2e2e;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+body.dark-mode #add-expense button {
+  background: #555;
+}
+
+body.dark-mode #clear-btn {
+  background: #b71c1c;
+}
+
+body.dark-mode #clear-btn:hover {
+  background: #991b1b;
+}
+
+body.dark-mode #export-btn {
+  background: #0d47a1;
+}
+
+body.dark-mode #export-btn:hover {
+  background: #08306b;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  main {
+    padding: 0.5rem;
+  }
+
+  #add-expense,
+  #expenses-list {
+    padding: 0.5rem;
+  }
+
+  #add-expense input,
+  #add-expense select {
+    font-size: 1rem;
+  }
+
+  #expenses-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #expenses-list li button {
+    align-self: flex-end;
+  }
+}
